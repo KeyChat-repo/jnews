@@ -22,7 +22,7 @@ pagination:
     before: 2
     after: 2
 
-exlude: ['node_modules', 'gulpfile.js', 'package.json', 'package-lock.json', 'js/common.js', 'npm-debug.log', '**/Thumbs.db', 'libs', 'sass']
+exclude: ['node_modules', 'gulpfile.js', 'package.json', 'package-lock.json', 'js/common.js', 'npm-debug.log', '**/Thumbs.db', 'libs', 'sass']
 
 soc: 
   <li><a href="#"><i class="fa fa-facebook"></i></a></li>
