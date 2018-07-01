@@ -9,9 +9,10 @@ markdown: kramdown
 theme: minima
 plugins: 
   - jekyll-paginate-v2
-  
-category_dir: blog
+
+category_dir: blog  
 pagination:
+#  category: blog
   enable: true
   per_page: 10
   title: ':title - страница :num'
