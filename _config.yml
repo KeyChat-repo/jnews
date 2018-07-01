@@ -13,11 +13,13 @@ markdown: kramdown
 plugins: 
   - jekyll-paginate-v2
 
-category_dir: blog  
+category_dir: 'news'  
 pagination:
-  category: blog
   enable: true
+  category: 'news'
+  locale: ''
   per_page: 10
+  permalink: '/page/:num/'
   title: ':title - страница :num'
   limit: 0
   sort_field: 'date'
@@ -34,7 +36,7 @@ soc:
   <li><a href="#"><i class="fa fa-instagram"></i></a></li>
   <li><a href="#"><i class="fa fa-rss"></i></a></li>
 
-copyright: Копирование и размещение контента запрещено
+copyright: Копирование контента и размещение на других сайтах запрещено.
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

@@ -1,9 +1,10 @@
 <ul>
-    <li class="active"><a href="#">Политика</a></li>
-    <li><a href="#">Экономика</a></li>
-    <li><a href="#">Общество</a></li>
-    <li><a href="#">Мир</a></li>
-    <li><a href="#">Галлерея</a></li>
-    <li><a href="#">Досье</a></li>
-    <li><a href="#">Пресс-релизы</a></li>
+    {% assign url = page.url | relative_url %}
+    <li class="{% if url == '/news/politics/' %}active{% endif %}"><a href="{{site.baseurl}}news/politics/">Политика</a></li>
+    <li class="{% if url == '/news/economics/' %}active{% endif %}"><a href="{{site.baseurl}}news/economics/">Экономика</a></li>
+    <li class="{% if url == '/news/society/' %}active{% endif %}"><a href="{{site.baseurl}}news/society/">Общество</a></li>
+    <li class="{% if url == '/news/world/' %}active{% endif %}"><a href="{{site.baseurl}}news/world/">Мир</a></li>
+    <li class="{% if url == '/news/gallery/' %}active{% endif %}"><a href="{{site.baseurl}}news/gallery/">Галерея</a></li>
+    <li class="{% if url == '/news/person/' %}active{% endif %}"><a href="{{site.baseurl}}news/person/">Досье</a></li>
+    <li class="{% if url == '/news/pressrel/' %}active{% endif %}"><a href="{{site.baseurl}}news/pressrel/">Пресс-релизы</a></li>
 </ul>
