@@ -5,16 +5,27 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
-
+	.logo
+		padding-left: $gutter
+	.search-wrap
+		.search
+			padding-right: $gutter*2
+		.search-field
+			padding: $gutter/2 $gutter*2
 // ≥992px
 +media-breakpoint-down(md)
-
+	.logo
+		padding-left: $gutter
+	.search-wrap
+		.search
+			padding-right: $gutter
+	
 	.main-menu
 		display: none
 		padding: 20px
 	.mobile-menu-button
 		display: block
-
+				
 	.item-title
 		&-content
 			padding: 40px 30px
@@ -97,12 +108,13 @@
 
 	.logo
 		font-size: 19px
-		padding-left: $gutter/2
-
+		
 	.search-wrap
 		.search
 			padding-right: $gutter/2
-	
+		.search-field
+			padding: $gutter/2 $gutter
+
 	.fourth-section
 		padding: $gutter/1.5 0
 

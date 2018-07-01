@@ -3,16 +3,19 @@ name: AZ News
 description: Азербайджан, новости, актуальные события в стране и мире
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+icon: 'img/favicon/favicon.ico'
+imagehome: ''
+themecolor: '#202222'
 
 # Build settings
 markdown: kramdown
-theme: minima
+#theme: minima
 plugins: 
   - jekyll-paginate-v2
 
 category_dir: blog  
 pagination:
-#  category: blog
+  category: blog
   enable: true
   per_page: 10
   title: ':title - страница :num'
