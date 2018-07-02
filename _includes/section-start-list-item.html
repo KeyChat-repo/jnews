@@ -1,0 +1,9 @@
+<div class="col-md-12 section-start-list-item">
+    <a href="{{post.url}}">
+        <span class="date">{{post.date | date: "%d/%m/%Y"}}</span>
+        <h3>{{post.title}}</h3>
+        <div class="list-item-text">
+            {{ post.content | strip_html | truncatewords: 40}}
+        </div>
+    </a>
+</div>

@@ -440,8 +440,7 @@ section
 		min-height: 300px
 		.date
 			display: inline-block
-			margin-left: 20px
-			color: #ffffff
+			color: lighten($text-color, 45%)
 	.item-social
 		margin-top: 1px
 
@@ -495,71 +494,90 @@ section
 				bottom: $gutter/2
 				left: $gutter/2
 
-.item-title-white
-	.date
-		font-size: 13px
-		display: inline-block
-		margin-left: 20px
-		color: #ffffff
-	.item-comments-count
-		font-size: 12px
-	.item-social
-		margin-top: 0
-	.item-title
-		min-height: 230px
-		&-content
-			padding: 40px 40px 25px
-
 .type-one
+	.row
+		margin-bottom: $gutter
+	.row-2
+		align-content: space-between
 	&-header
 		margin-bottom: $gutter/2
 	&-first
+		position: relative
 		> div
 			> a
 				display: block
 				background-color: $dark
-		.item-social
-			margin-top: 8px
-			a, .item-comments, .date
-				color: #a0a0a0
-				font-size: 13px
-			.item-comments-count
-				font-size: 12px
-			.date
-				display: inline-block
-				margin-left: 20px
 		h3
-			font-size: 22px
+			position: absolute
+			top: $gutter/2
+			padding: $gutter $gutter*2
+			margin: auto
+			font-size: 16px
 			text-transform: uppercase
 			font-weight: 800
-			margin-top: 8px
 			line-height: 1.2
-			margin-bottom: 30px
 			a
-				color: $text-color
+				color: lighten($text-color, 75%)
 				display: block
+				z-index: 9999
 				text-decoration: none
+		.date
+			left: $gutter
+			top: $gutter				
+				
+			
 			&:hover
 				a
 					color: $accent
 					text-decoration: underline
-	.pattern
-		margin-bottom: $gutter
 
 .item-title-white
+	position: relative
 	.date
+		position: absolute
+		bottom: $gutter
+		left: $gutter
 		font-size: 13px
 		display: inline-block
-		margin-left: 20px
-		color: #ffffff
-	.item-comments-count
-		font-size: 12px
-	.item-social
-		margin-top: 0
+		color: lighten($text-color, 50%)
 	.item-title
+		position: relative
 		min-height: 230px
 		&-content
-			padding: 40px 40px 25px
+			position: absolute
+			top: 0
+			padding: $gutter
+
+.section-start-list-item
+	&:first-child
+		margin-top: 0
+	margin-top: $gutter
+	position: relative
+	background-color: rgba(#fff,0)
+	border-bottom: 1px solid rgba($text-color, 0)
+	.date
+		display: inline-block
+		color: lighten($accent, 15%)
+		line-height: 1
+		padding-right: $gutter
+	h3
+		display: inline-block
+		margin-bottom: 0
+	a
+		color: $text-color
+		text-decoration: none
+		transition: color .15s ease, text-decoration .15s ease
+		&:hover, &:focus
+			color: lighten($text-color, 15%)
+	.list-item-text
+		font-size: 14px
+		margin-left: $gutter
+		margin-bottom: $gutter/2
+	&:hover
+		border-bottom: $text-color 1px solid
+		h3
+			a
+				color: lighten($text-color, 15%)
 
 .button
 	display: inline-block
