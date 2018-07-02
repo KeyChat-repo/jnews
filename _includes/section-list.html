@@ -1,0 +1,15 @@
+<section class="section-list">
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-sm-12">
+                <h2 class="type-one-header"><a href="news/economics/">Экономика</a></h2>
+            </div>
+
+            {% for post in site.categories.economics limit: 5 %}
+            {% include section-list-item.html %}
+            {% endfor %}
+
+        </div>
+    </div>
+</section>

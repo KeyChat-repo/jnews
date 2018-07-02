@@ -1,0 +1,21 @@
+<div class="col-md-12">
+    <div class="type-list-first overlay">
+        <div class="row">
+            <div class="col-md-3">
+                <a href="{{post.url}}" title="{{post.title}}" class="pattern">
+                    <img src="{{post.thumb}}" alt="alt" class="img-responsive img-width">
+                </a>
+            </div>
+                
+            <div class="col-md-9">
+                <div>
+                    <h3><a href="{{post.url}}">{{post.title}}</a></h3>
+                    <div class="list-item-text">
+                        {{ post.content | strip_html | truncatewords: 40}}
+                    </div>
+                </div>
+            </div>
+            <span class="date">{{post.date | date: "%d/%m/%Y"}}</span>
+        </div>
+    </div>
+</div>
