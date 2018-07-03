@@ -15,7 +15,7 @@ plugins:
 
 category_dir: 'news'  
 pagination:
-  enable: true
+  enabled: true
   locale: ''
   per_page: 10
   permalink: '/page/:num/'
