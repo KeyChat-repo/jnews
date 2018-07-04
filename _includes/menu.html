@@ -1,16 +1,9 @@
 <ul>
-    {% assign url = page.url | relative_url %}
-    <!-- 
-
-        исправить навигацию на конструкцию:
-        {% if page.url contains 'news/politics/' %}active{% endif %}
-
-    -->
-    <li class="{% if url == '/news/politics/' %}active{% endif %}"><a href="{{site.baseurl}}news/politics/">Политика</a></li>
-    <li class="{% if url == '/news/economics/' %}active{% endif %}"><a href="{{site.baseurl}}news/economics/">Экономика</a></li>
-    <li class="{% if url == '/news/society/' %}active{% endif %}"><a href="{{site.baseurl}}news/society/">Общество</a></li>
-    <li class="{% if url == '/news/world/' %}active{% endif %}"><a href="{{site.baseurl}}news/world/">Мир</a></li>
-    <li class="{% if url == '/news/gallery/' %}active{% endif %}"><a href="{{site.baseurl}}news/gallery/">Галерея</a></li>
-    <li class="{% if url == '/news/person/' %}active{% endif %}"><a href="{{site.baseurl}}news/person/">Досье</a></li>
-    <li class="{% if url == '/news/pressrel/' %}active{% endif %}"><a href="{{site.baseurl}}news/pressrel/">Пресс-релизы</a></li>
+    <li class="{% if page.url contains '/news/politics/' %}active{% endif %}"><a href="{{site.baseurl}}news/politics/">Политика</a></li>
+    <li class="{% if page.url contains '/news/economics/' %}active{% endif %}"><a href="{{site.baseurl}}news/economics/">Экономика</a></li>
+    <li class="{% if page.url contains '/news/society/' %}active{% endif %}"><a href="{{site.baseurl}}news/society/">Общество</a></li>
+    <li class="{% if page.url contains '/news/world/' %}active{% endif %}"><a href="{{site.baseurl}}news/world/">Мир</a></li>
+    <li class="{% if page.url contains '/news/gallery/' %}active{% endif %}"><a href="{{site.baseurl}}news/gallery/">Галерея</a></li>
+    <li class="{% if page.url contains '/news/person/' %}active{% endif %}"><a href="{{site.baseurl}}news/person/">Досье</a></li>
+    <li class="{% if page.url contains '/news/pressrel/' %}active{% endif %}"><a href="{{site.baseurl}}news/pressrel/">Пресс-релизы</a></li>
 </ul>

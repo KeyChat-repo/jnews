@@ -3,7 +3,7 @@
         <span class="date">{{post.date | date: "%d/%m/%Y"}}</span>
         <h3>{{post.title}}</h3>
         <div class="list-item-text">
-            {{ post.content | strip_html | truncatewords: 40}}
+            {{ post.content | strip_html | truncatewords: 30}}
         </div>
     </a>
 </div>

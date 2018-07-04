@@ -33,52 +33,12 @@
 
 	
 
-	<section class="pagination-section text-center d-none d-md-block">
-		<a href="#" class="button">Следующая страница <i class="fa fa-angle-double-right"></i></a>
-		<div class="pagination">
-			<span class="pagination-left" title="Предыдущая страница">&laquo;</span>
-			<span class="active">1</span>
-			<a href="#">2</a>
-			<a href="#">3</a>
-			<a href="#">4</a>
-			<a href="#">5</a>
-			<a href="#" class="pagination-right" title="Следующая страница">&raquo;</a>
-		</div>
-	</section>
-	<footer class="main-footer">
-			<div class="contaiter">
+	{% include pagination-section.html %}
+
+	{% include footer-big.html %}
+	{% include footer-small.html %}
 	
-				<nav class="main-menu footer-menu">
-					<ul>
-						<li class="active"><a href="#">Электроника</a></li>
-						<li><a href="#">Новости IT</a></li>
-						<li><a href="#">Обзоры</a></li>
-						<li><a href="#">Лайфхаки</a></li>
-						<li><a href="#">DIY</a></li>
-						<li><a href="#">О сайте</a></li>
-					</ul>
-				</nav>
-	
-				<nav class="soc">
-					<ul>
-						<li><a href="#"><i class="fa fa-vk"></i></a></li>
-						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#"><i class="fa fa-odnoklassniki"></i></a></li>
-						<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-						<li><a href="#"><i class="fa fa-rss"></i></a></li>
-					</ul>
-				</nav>
-	
-			</div>
-		</footer>
-		<footer class="bottom-footer">
-			<div class="container text-center">
-				<div class="footer-copy">2018 © <span class="logo-footer logo-litera">GeekTOP.ru</span></div>
-				<p>Копирование контента и размещение на других сайтах запрещено.</p>
-			</div>
-		</footer>
-	
-		<script src="js/scripts.min.js"></script>
-	
-	</body>
-	</html>
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

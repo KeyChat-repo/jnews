@@ -1,0 +1,19 @@
+<section class="pagination-section text-center d-none d-md-block">
+    {% if paginator.total_pages > 1 %}
+    {% if paginator.next_page %}
+    <a href="{{paginator.next_page_path}}" class="button">Следующая страница <i class="fa fa-angle-double-right"></i></a>
+    {% endif %}
+    {% endif %}
+
+    
+    
+    <div class="pagination">
+        <span class="pagination-left" title="Предыдущая страница">&laquo;</span>
+        <span class="active">1</span>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#" class="pagination-right" title="Следующая страница">&raquo;</a>
+    </div>
+</section>
