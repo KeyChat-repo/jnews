@@ -446,7 +446,7 @@ section
 	.item-social
 		margin-top: 1px
 
-.section-list, .type-one-cat
+.section-list, .type-one-cat, .cat-list
 	.overlay
 		&::before
 			content: ''
@@ -487,18 +487,14 @@ section
 			margin: $gutter/2
 			
 	.date
-		position: absolute
-		bottom: $gutter*1.5
-		right: $gutter
 		color: lighten($text-color, 25%)
+		margin-bottom: $gutter/3
 	h3
 		font-size: 17px
-		margin-left: $gutter/2
 		text-transform: uppercase
 		font-weight: 800
 		margin-top: $gutter/2
 		line-height: 1.2
-		margin-bottom: $gutter
 		a
 			color: $text-color
 			display: block
@@ -834,7 +830,6 @@ a.cat-list-item
 		font-weight: 500
 	.date
 		display: inline-block
-		margin-left: 20px
 		color: #aaaaaa
 		margin-top: 0
 	.item-comments
@@ -912,14 +907,8 @@ a.cat-list-item
 		width: 30px
 
 .page-header
-	&.overlay
-		&::before
-			opacity: 1
-			background-color: transparent
-			background-image: linear-gradient(rgba(#000, .2), rgba(#000, .7))
-	height: 80vh
-	min-height: 460px
-	color: #ffffff
+	min-height: 300px
+	color: $text-color
 	position: relative
 
 .ispage
@@ -932,20 +921,18 @@ a.cat-list-item
 	&-content
 		position: absolute
 		width: 100%
-		bottom: 15%
+		bottom: 5%
 	&-meta
 		> *
 			display: inline-block
 		.date
-			color: #ffffff
-			font-size: 15px
+			color: lighten($text-color,25%)
+			font-size: 12px
 		h1
 			font-size: 32px
 			line-height: 1.2
 			margin: 15px 0
 			display: block
-		.item-comments-count
-			color: #ffffff
 
 .page-category-link
 	font-size: 14px

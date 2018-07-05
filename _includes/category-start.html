@@ -14,16 +14,15 @@
         </div>
         <div class="row">
             <div class="col-md-8">
-                {% for post in paginator.posts limit: 4 offset: 3 %}
+                {% for post in paginator.posts limit: 7 offset: 3 %}
                 {% include category-start-item2.html %}
                 {% endfor %}
                 
-                {% for post in paginator.posts limit: 5 offset: 7 %}
-                {% include category-start-item3.html %}
-                {% endfor %}
+               
             </div>
             <div class="col-md-4">
                 {% include ad-tall.html %}
+                {% include last-news.html %}
             </div>
         </div>
         {% include pagination-section.html styl="pagination-section-first text-center d-md-none"%}

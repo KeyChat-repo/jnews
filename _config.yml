@@ -18,7 +18,7 @@ pagination:
   enabled: true
   locale: ''
   per_page: 10
-  permalink: '/page/:num/'
+  permalink: '/:num/'
   title: ':title - страница :num'
   limit: 0
   sort_field: 'date'
