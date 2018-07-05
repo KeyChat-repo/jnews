@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h2 class="fourth-section-header">{{page.title}}</h2>
+                <h2 class="fourth-section-header">{{page.title | truncatewords: 1, ""}}</h2>
             </div>
         </div>
     </div>
@@ -26,6 +26,7 @@
                 {% include ad-tall.html %}
             </div>
         </div>
+        {% include pagination-section.html styl="pagination-section-first text-center d-md-none"%}
     </div>
         
 </section>

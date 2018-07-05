@@ -1,19 +1,34 @@
-<section class="pagination-section text-center d-none d-md-block">
-    {% if paginator.total_pages > 1 %}
+<section class="{{include.styl}}">
+    <!-- {% if paginator.total_pages > 1 %}
     {% if paginator.next_page %}
     <a href="{{paginator.next_page_path}}" class="button">Следующая страница <i class="fa fa-angle-double-right"></i></a>
     {% endif %}
-    {% endif %}
+    {% endif %} -->
 
-    
-    
+    {% if paginator.page_trail %}
     <div class="pagination">
+        {% if paginator.previous_page %}
+        <a href="{{paginator.previous_page_path}}" class="pagination-left" title="Предыдущая страница">&laquo;</a>
+        {% else %}
         <span class="pagination-left" title="Предыдущая страница">&laquo;</span>
-        <span class="active">1</span>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">4</a>
-        <a href="#">5</a>
-        <a href="#" class="pagination-right" title="Следующая страница">&raquo;</a>
+        {% endif %}
+
+        {% for trail in paginator.page_trail %}
+        {% if page.url == trail.path %}
+        <span class="active">{{trail.num}}</span>
+        {% else %}
+        <a href="{{trail.path | remove: 'index.html'}}" title="{{trail.title}}">{{trail.num}}</a>
+        {% endif %}
+        {% endfor %}
+        
+        {% if paginator.next_page %}
+        <a href="{{paginator.next_page_path}}" class="pagination-right" title="Следующая страница">&raquo;</a>
+        {% else %}
+        <span class="pagination-right" title="Следующая страница">&raquo;</span>
+        {% endif %}
+        
     </div>
+    {% endif %}
+    
+    
 </section>
