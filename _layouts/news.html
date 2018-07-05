@@ -22,7 +22,7 @@
 				<div class="col-md-8">
 
 					<div class="all-posts-header">Все новости:</div>
-					{% for post in site.posts limit: 15 %}
+					{% for post in paginator.posts limit: 15 %}
 					{% include category-start-item2.html %}
 					{% endfor %}
 
