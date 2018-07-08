@@ -36,7 +36,7 @@ $(function() {
 	});
 
 	$("body").prognroll({
-		height: 3,
+		height: 2,
 		color: "#ec1c1c",
 		custom: false
 	});

@@ -1,13 +1,44 @@
 <div class="aside-box">
-    <div class="cat-list-head">Разделы</div>
-    <ul class="cat-list">
-        <li><a href="{{site.baseurl}}news/politics/">Политика</a><span>{{site.categories.politics | size}}</span></li>
-        <li><a href="{{site.baseurl}}news/economics/">Экономика</a><span>{{site.categories.economics | size}}</span></li>
-        <li><a href="{{site.baseurl}}news/society/">Общество</a><span>{{site.categories.society | size}}</span></li>
-        <li><a href="{{site.baseurl}}news/world/">Мир</a><span>{{site.categories.world | size}}</span></li>
-        <li><a href="{{site.baseurl}}news/gallery/">Галерея</a><span>{{site.categories.gallery | size}}</span></li>
-        <li><a href="{{site.baseurl}}news/person/">Досье</a><span>{{site.categories.person | size}}</span></li>
-        <li><a href="{{site.baseurl}}news/pressrel/">Пресс-релизы</a><span>{{site.categories.pressrel | size}}</span></li>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Категории</h2>              
+            </div>
+        </div>
         
-    </ul>
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a href="{{site.baseurl}}news/politics/">Политика</a>
+                        <span class="badge badge-primary badge-pill">{{site.categories.politics | size}}</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a href="{{site.baseurl}}news/economics/">Экономика</a>
+                        <span class="badge badge-primary badge-pill">{{site.categories.economics | size}}</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a href="{{site.baseurl}}news/society/">Общество</a>
+                        <span class="badge badge-primary badge-pill">{{site.categories.society | size}}</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a href="{{site.baseurl}}news/world/">Мир</a>
+                        <span class="badge badge-primary badge-pill">{{site.categories.world | size}}</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a href="{{site.baseurl}}news/gallery/">Галерея</a>
+                        <span class="badge badge-primary badge-pill">{{site.categories.gallery | size}}</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a href="{{site.baseurl}}news/person/">Досье</a>
+                        <span class="badge badge-primary badge-pill">{{site.categories.person | size}}</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a href="{{site.baseurl}}news/pressrel/">Пресс-релизы</a>
+                        <span class="badge badge-primary badge-pill">{{site.categories.pressrel | size}}</span>
+                    </li>
+                </div>
+            </ul>
+
+        </div>
+
 </div>

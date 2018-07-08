@@ -170,9 +170,6 @@ a
 	display: block
 	overflow: hidden
 
-.top-ad
-	padding-bottom: $gutter
-
 .container-fluid
 	max-width: 1200px
 	padding: 0 $gutter
@@ -1458,41 +1455,85 @@ a.cat-list-item
 	margin-left: $gutter
 	margin-right: $gutter
 	text-transform: uppercase
-	
-.cat-list
-	margin-left: $gutter
-	margin-right: $gutter
-	list-style: none
-	text-align: left
-	padding: $gutter $gutter/2
-	box-shadow: 0 0 10px rgba(0,0,0,0.5)
-	li
-		display: flex
-		justify-content: space-between
-		margin-bottom: $gutter/3
-		padding-bottom: 2px
-		margin-left: $gutter
-		margin-right: $gutter
-		
-		&:hover
-			a
+
+
+#home-carousel
+	width: 100%
+
+section
+	h2
+		color: $text-color
+		margin: $gutter 0
+		padding-bottom: $gutter/2
+		border-bottom: 2px solid $accent
+	.card-body
+		padding: $gutter/3 $gutter/2
+		a
+			text-decoration: none
+			color: $text-color
+			transition: all .25s ease
+			&:hover
 				color: $accent
-			span
-				background: lighten($accent,15%)
+		h4
+			font-weight: normal
+			line-height: 1.2
+		.card-text
+			font-size: 14px
+	.card-footer
+		line-height: 1.2
+		font-size: 14px
+		padding: $gutter/3 $gutter/2
+
+.home-carousel
+	h2
+		color: $text-color
+		margin: $gutter -10px
+		padding-bottom: $gutter/2
+		border-bottom: 2px solid $accent
+	.carousel-item
+		img
+			width: 100%
+
+	.carousel-caption
+		text-align: left
+		a
+			text-decoration: none
+			font-weight: bold
+			color: #ffffff
+		h5
+			font-size: 19px
+			text-transform: uppercase
+		p
+			font-size: 14px
+			color: lighten($text-color,55%)
+		bottom: 0
+		left: 0
+		padding: $gutter
+		color: #ffffff
+		background: rgba(0,0,0,.3)
+	.carousel-indicators
+		right: 0
+		bottom: 5px
+		left: 0
+		margin-bottom: 5px
+
+.aside-box
+	h2
+		margin: $gutter
+		text-align: left
+	.list-group
+		margin: 0 $gutter
+		box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12)
 		a
 			text-decoration: none
 			font-size: 16px
 			font-weight: bold
-			color: lighten($text-color,15%)
-			transition: all .25s ease
-		span
-			font-size: 14px
-			padding: 0 10px
-			color: white
-			font-weight: bold
-			transition: all .25s ease
-			background: lighten($accent,30%)
-			border-radius: 10px
+			color: $text-color
+		.badge-primary
+			color: #ffffff
+			background-color: $accent
 
+
+		
 
 @import "media" // Always at the end

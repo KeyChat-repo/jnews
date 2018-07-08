@@ -40,6 +40,7 @@ gulp.task('js', function() {
 		'libs/jquery/dist/jquery.min.js',
 		'libs/likely/likely.js',
 		'libs/prognroll/prognroll.js',
+		'libs/bootstrap/bootstrap.min.js',
 		'js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
