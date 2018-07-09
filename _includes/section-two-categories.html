@@ -1,114 +1,103 @@
-<section class="home-catname">
+<section class="home-2catname">
     <div class="container-fluid">
+        <div class="row mx-2 mb-5 mt-0">
+            {% include ad-hor.html %}
+        </div>
         <div class="row">
             <div class="col-md-6">
-
+                
                 <div class="card mb-2">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2><a href="news/{{include.ct1}}">{{include.cn1}}</a></h2>
+                        </div>
+                    </div>
                     <div class="card-body">
                         <div class="row">
-
-                            <div class="col-md-5 mx-2 my-3">
-                                <a href="">
+                            {% for post in site.categories[include.ct1] limit: 1 %}
+                            <div class="col-md-4 ml-2 my-2">
+                                <a href="{{post.url}}">
                                     <div class="view overlay">
-                                        <img src="http://mdbootstrap.com/img/Photos/Others/img%20(43).jpg" class="img-fluid" alt="Sample image">
+                                        <img src="{{post.image}}" class="img-fluid" alt="{{post.title}}">
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-md-6 mt-3">
-                                <h4 class="mb-2"><strong>This is title of the news</strong></h4>
-                                <p >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque,
-                                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis...</p>
-                                <p class="card-date">19/08/2016</p>
-                                <a class="btn btn-indigo btn-sm">Read more</a>
+                            <div class="col mt-2 px-3">
+                                <a href="{{post.url}}"><h4><strong>{{post.title}}</strong></h4></a>
+                                <p class="small">{{post.description}}</p>
+                                
                             </div>
-                            
+                            {% endfor %}
                         </div>
                        
                         <div class="row">
                             
-                            <div class="col-md-5 mx-3 my-2">
-                                
-                                <div class="single-news">
+                            <div class="single-news d-flex flex-column my-auto pt-2">
 
-                                    <div class="row mb-2">
-                                        <div class="col-md-4">
-                                            <a href="">
-                                                <div class="view overlay mb-2">
-                                                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/People/4-col/img%20(95).jpg" class="img-fluid rounded-0" alt="Minor sample post image">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <p class="card-date"><strong>19/08/2016</strong></p>
-                                            <p class="text-left"><a>Title of the news</a></p>
-                                        </div>
-
+                                    {% for post in site.categories[include.ct1] limit: 5 offset: 1 %}
+                                    <div class="col-md-12 d-flex flew-row px-3 mx-0 mb-2">
+                                        <p class="card-date px-1"><i class="fa fa-caret-right"></i></p>
+                                        <p class="single-title pl-2"><a href="{{post.url}}">{{post.title}}</a></p>
                                     </div>
-                                </div>
-
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="card mb-2">
-                    <div class="card-body">
-                        <div class="row">
-
-                            <div class="col-md-5 mx-2 my-3">
-                                <a href="">
-                                    <div class="view overlay">
-                                        <img src="http://mdbootstrap.com/img/Photos/Others/img%20(43).jpg" class="img-fluid" alt="Sample image">
+                                    {% endfor %}
+                                    <div class="go-cat">
+                                        <a href="news/{{include.ct1}}" class="btn btn-sm">Перейти в категорию <i class="fa fa-chevron-right ml-2"></i></a>
                                     </div>
-                                </a>
-                            </div>
-                            <div class="col-md-6 mt-3">
-                                <h4 class="mb-2"><strong>This is title of the news</strong></h4>
-                                <p >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque,
-                                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis...</p>
-                                <p class="card-date">19/08/2016</p>
-                                <a class="btn btn-indigo btn-sm">Read more</a>
                             </div>
                             
                         </div>
                         
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-md-6">
+                
+                <div class="card mb-2">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2><a href="news/{{include.ct2}}">{{include.cn2}}</a></h2>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            {% for post in site.categories[include.ct2] limit: 1 %}
+                            <div class="col-md-4 ml-2 my-2">
+                                <a href="{{post.url}}">
+                                    <div class="view overlay">
+                                        <img src="{{post.image}}" class="img-fluid" alt="{{post.title}}">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col mt-2 px-3">
+                                <a href="{{post.url}}"><h4><strong>{{post.title}}</strong></h4></a>
+                                <p class="small">{{post.description}}</p>
+                                
+                            </div>
+                            {% endfor %}
+                        </div>
+                        
                         <div class="row">
                             
-                            <div class="col-md-5 mx-3 my-2">
-                                
-                                <div class="single-news">
+                            <div class="single-news d-flex flex-column my-auto pt-2">
 
-                                    <div class="row mb-2">
-                                        <div class="col-md-4">
-                                            <a href="">
-                                                <div class="view overlay mb-2">
-                                                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/People/4-col/img%20(95).jpg" class="img-fluid rounded-0" alt="Minor sample post image">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <p class="card-date"><strong>19/08/2016</strong></p>
-                                            <p class="text-left"><a>Title of the news</a></p>
-                                        </div>
-
+                                    {% for post in site.categories[include.ct2] limit: 5 offset: 1 %}
+                                    <div class="col-md-12 d-flex flew-row px-3 mx-0 mb-2">
+                                        <p class="card-date px-1"><i class="fa fa-caret-right"></i></p>
+                                        <p class="single-title pl-2"><a href="{{post.url}}">{{post.title}}</a></p>
                                     </div>
-                                </div>
-
+                                    {% endfor %}
+                                    <div class="go-cat">
+                                        <a href="news/{{include.ct2}}" class="btn btn-sm">Перейти в категорию <i class="fa fa-chevron-right ml-2"></i></a>
+                                    </div>
                             </div>
                             
                         </div>
+                        
                     </div>
                 </div>
-
             </div>
-
-            <div class="col-md-6">
-
-
-
-            </div>
-
         </div>
+
     </div>
 </section>

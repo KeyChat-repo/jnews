@@ -9,17 +9,15 @@
 
 	{% include section-carousel.html %}
 
-	{% include section-catname.html ct="politics" cn="Политика" as="asside-categories.html" %}
+	{% include section-catname.html ct="politics" cn="Политика" as="asside-popular.html" %}
 
-	{% include section-catname.html ct="economics" cn="Экономика" as="asside-categories.html" %}
+	{% include section-catname.html ct="economics" cn="Экономика" as="asside-newsletter.html" %}
 
 	{% include section-two-categories.html ct1="world" cn1="Мир" ct2="society" cn2="Общество" %}
 
 	{% include section-dark.html %}
 
-	{% include section-asside2.html %}
-
-	{% include section-start.html %}
+	{% include section-asside2.html ct="pressrel" cn="Пресс-релизы" %}
 
 	<section class="s_more text-center">
 	{% include all-posts-button.html %}

@@ -184,27 +184,14 @@ section
 		font-size: 23px
 		font-weight: 800
 	
-.first-section	
-	.all-posts
-		.row
-			justify-content: flex-end
-	.button
-		margin-top: $gutter/3
-		border: none
-		color: $accent
-		font-weight: bold
-		background-color: #fff
-		padding: $gutter/3 $gutter
-		&::after
-			content: "..."
-		&:hover, &:focus
-			text-decoration: underline
-		&:hover
-			background-color: #fff
-			color: $accent
-		&:active
-			background-color: #fff
-			color: $accent
+.all-posts
+	.row
+		justify-content: center
+		a
+			text-decoration: none
+			border-radius: 50px
+
+		
 
 .first-section
 	.item-title
@@ -402,6 +389,8 @@ section
 	padding: 30px 0
 	background-color: $dark
 	h2
+		border: none
+		margin-bottom: 0
 		a
 			color: #ffffff
 
@@ -445,19 +434,6 @@ section
 			color: #a4a7ab
 			&:hover, &.hover
 				color: #ffffff
-
-.fourth-section
-	padding:
-		top: 30px
-	&-header
-		margin-bottom: 10px
-	.item-title
-		min-height: 300px
-		.date
-			display: inline-block
-			color: lighten($text-color, 45%)
-	.item-social
-		margin-top: 1px
 
 .section-list, .type-one-cat, .cat-list
 	.overlay
@@ -647,7 +623,7 @@ section
 		background-color: darken($accent, 5%)
 
 .s_more
-	padding: $gutter*2 0
+	padding: 0 0 $gutter*2 0
 	.button
 		margin: auto
 
@@ -1462,10 +1438,15 @@ a.cat-list-item
 
 section
 	h2
-		color: $text-color
 		margin: $gutter 0
 		padding-bottom: $gutter/2
 		border-bottom: 2px solid $accent
+		a
+			color: $text-color
+			text-decoration: none
+			transition: all .15s ease
+			&:hover, &:focus
+				text-decoration: none
 	.card-body
 		padding: $gutter/3 $gutter/2
 		a
@@ -1483,6 +1464,7 @@ section
 		line-height: 1.2
 		font-size: 14px
 		padding: $gutter/3 $gutter/2
+	padding-top: 0
 
 .home-carousel
 	h2
@@ -1490,50 +1472,117 @@ section
 		margin: $gutter -10px
 		padding-bottom: $gutter/2
 		border-bottom: 2px solid $accent
-	.carousel-item
-		img
-			width: 100%
+	
+.carousel-item
+	img
+		width: 100%
 
+.carousel-caption
+	text-align: left
+	a
+		text-decoration: none
+		font-weight: bold
+		color: #ffffff
+	h5
+		font-size: 19px
+		text-transform: uppercase
+	p
+		font-size: 14px
+		color: lighten($text-color,55%)
+	bottom: 0
+	left: 0
+	padding: $gutter
+	color: #ffffff
+	background: rgba(0,0,0,.3)
+.carousel-indicators
+	right: 0
+	bottom: 5px
+	left: 0
+	margin-bottom: 5px
+
+.list-group
+	margin: 0 $gutter
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12)
+	a
+		text-decoration: none
+		font-size: 16px
+		font-weight: bold
+		color: $text-color
+	
+
+.home-2catname
+	.card
+		h2
+			margin: $gutter/2 $gutter
+			font-size: 20px
+	.card-body
+		h4
+			font-size: 18px
+			
+		p
+			font-size: 16px
+			line-height: 1.3
+			margin-bottom: 0
+		.small
+			font-size: 14px
+			line-height: 1.2
+			padding-left: 1rem
+	.single-news
+		width: 100%
+		.card-date
+			font-size: 16px
+			line-height: 1.3
+		
+	.go-cat
+		display: flex
+		justify-content: flex-end
+		margin: $gutter/2 $gutter
+
+	
+.btn
+	border-radius: 50px	
+
+.fourth-section
+	p
+		font-size: 14px
+		line-height: 1.3
+	.first-meta
+		position: relative
+		i
+			display: block
+			position: absolute
+			right: 1.5rem
+			bottom: 1rem
+			width: 30px
+			height: 30px
+			line-height: 30px
+	
+.asside-popular
 	.carousel-caption
-		text-align: left
+		text-align: center
 		a
 			text-decoration: none
 			font-weight: bold
 			color: #ffffff
 		h5
-			font-size: 19px
+			font-size: 12px
 			text-transform: uppercase
-		p
-			font-size: 14px
-			color: lighten($text-color,55%)
-		bottom: 0
 		left: 0
-		padding: $gutter
-		color: #ffffff
-		background: rgba(0,0,0,.3)
-	.carousel-indicators
 		right: 0
-		bottom: 5px
-		left: 0
-		margin-bottom: 5px
-
-.aside-box
-	h2
-		margin: $gutter
-		text-align: left
-	.list-group
-		margin: 0 $gutter
-		box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12)
-		a
-			text-decoration: none
+	.carousel-indicators li
+		width: 5px
+		height: 5px
+		border-radius: 50%
+					
+.asside-newsletter
+	.card-body
+		input
+			border-radius: 50px
+		p
 			font-size: 16px
-			font-weight: bold
-			color: $text-color
-		.badge-primary
-			color: #ffffff
-			background-color: $accent
+		button
+			border-radius: 50px
 
 
-		
 
 @import "media" // Always at the end
