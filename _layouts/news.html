@@ -7,19 +7,20 @@
 
 	{% include top-line.html %}
 
-	<div class="cat-list-first">
-		<div class="container-fluid">
+	<div class="container-fluid">
+		<div class="row mr-5 ml-3 mt-3">
 			{% include ad-hor.html %}
 		</div>
 	</div>
+	
 
 	<div class="cat-list">
 		<div class="container-fluid">
 			<div class="row">
 
 				<div class="col-md-8">
-					<div class="all-posts-header">Все новости:</div>
-					{% for post in paginator.posts limit: 15 %}
+					<h2 class="all-posts-header mb-3">Все новости</h2>
+					{% for post in paginator.posts limit: 20 %}
 					{% include category-start-item2.html %}
 					{% endfor %}
 
@@ -29,10 +30,9 @@
 				<div class="col-md-4">
 					<aside class="main-aside">
 						<div class="aside-box">
-							{% include last-news.html %}
+							{% include asside-popular.html %}
 						</div>
-						{% include ad-tall.html %}
-						{% include social.html %}
+						{% include asside-newsletter.html %}
 					</aside>
 				</div>
 

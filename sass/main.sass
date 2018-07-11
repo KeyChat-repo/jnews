@@ -203,19 +203,18 @@ section
 		position: absolute
 		bottom: 0
 		color: #ffffff
-		padding: 40px
 		z-index: 1
+		background: rgba(#ffffff,.2)
 		h3
 			margin: 0
 			text-transform: uppercase
-			font-weight: 800
-			line-height: 1.25
-			font-size: 19px
+			font-weight: 600
+			line-height: 1.2
+			font-size: 15px
 		a
 			color: #ffffff
 			text-decoration: none
-			&:hover
-				text-decoration: underline
+
 
 .pattern
 	background-color: $dark
@@ -373,15 +372,14 @@ section
 
 .date
 	font-size: 13px
-	color: $accent
+	color: lighten($text-color,50%)
 	font-family: baron-g, sans-serif
 	font-weight: bold
-	margin-top: 10px
 	display: block
+	text-align: right
 
 .aside-box
 	margin-bottom: $gutter
-	text-align: center
 	.img-responsive
 		display: inline-block
 
@@ -436,6 +434,9 @@ section
 				color: #ffffff
 
 .section-list, .type-one-cat, .cat-list
+	h2
+		color: $text-color
+		border-bottom: 2px solid $accent
 	.overlay
 		&::before
 			content: ''
@@ -445,9 +446,6 @@ section
 			opacity: .9
 
 .category-start
-	.fourth-section-header
-		padding-top: $gutter
-		color: $accent
 	.type-list-first
 		h3
 			margin-bottom: $gutter/2
@@ -469,7 +467,7 @@ section
 
 .type-list-first
 	display: flex
-	align-items: center
+	align-items: space-between
 	position: relative
 	.row
 		.pattern
@@ -477,7 +475,6 @@ section
 			
 	.date
 		color: lighten($text-color, 25%)
-		margin-bottom: $gutter/3
 		display: inline-block
 	.catname
 		font-size: 10px
@@ -500,7 +497,8 @@ section
 			text-decoration: none
 	.list-item-text
 		z-index: 999
-		font-size: 14px
+		font-size: 13px
+		line-height: 1.2
 		
 	&:hover
 		h3
@@ -515,8 +513,6 @@ section
 				left: $gutter/2
 
 .type-one
-	.row
-		margin-bottom: $gutter
 	.row-2
 		align-content: space-between
 	&-header
@@ -734,8 +730,7 @@ nav.soc
 			&::before
 				opacity: 0.25
 
-.cat-list-first
-	padding-top: $gutter
+
 
 .type-one-cat
 	background-color: transparent
@@ -794,14 +789,11 @@ a.cat-list-item
 	border-bottom: 2px solid $accent
 	padding-bottom: 5px
 
-.lb-header, .all-posts-header
+.lb-header
 	font-size: 21px
 	font-weight: 800
 	margin: 0
 	text-align: left
-
-.all-posts-header
-	text-transform: uppercase
 
 .lb-item
 	position: relative
@@ -1502,7 +1494,6 @@ section
 
 .list-group
 	margin: 0 $gutter
-	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12)
 	a
 		text-decoration: none
 		font-size: 16px

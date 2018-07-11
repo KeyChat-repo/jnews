@@ -1,28 +1,18 @@
 <section class="type-one type-one-cat category-start">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12">
-                <h2 class="fourth-section-header">{{page.title}}</h2>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row no-gutters">
-            {% for post in paginator.posts limit: 3 %}
-            {% include category-start-item.html %}
-            {% endfor %}
-        </div>
-        <div class="row">
             <div class="col-md-8">
-                {% for post in paginator.posts limit: 7 offset: 3 %}
+                <h2 class="fourth-section-header">{{page.title | split: "- страница" | first }}</h2>
+                {% for post in paginator.posts limit: 15 %}
                 {% include category-start-item2.html %}
                 {% endfor %}
                 
                
             </div>
             <div class="col-md-4">
-                {% include ad-tall.html %}
-                {% include last-news.html %}
+                {% include asside-newsletter.html %}
+                {% include asside-person.html %}
+                {% include asside-popular.html ad="ad-square.html" %}
             </div>
         </div>
         {% include pagination-section.html styl="pagination-section-first text-center d-md-none"%}
