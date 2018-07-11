@@ -43,7 +43,7 @@
 							<ul>
 								<li><a href="{{site.baseurl}}">Главная</a></li>
 								<li><a href="{{site.category_dir}}/{{page.categories}}">{{page.catname}}</a></li>
-								<li class="active">{{page.title | truncatewords: 9}}</li>
+								<li class="active">{{page.title | truncatewords: 10}}</li>
 							</ul>
 						</nav>
 
@@ -79,12 +79,8 @@
 
 					<aside class="main-aside">
 
-						{% include asside-categories.html %}
-						{% include ad-tall.html %}
-
-						<div class="aside-box">
-							{% include last-news.html %}
-						</div>
+						{% include asside-popular.html %}
+						{% include asside-newsletter.html %}
 
 						{% include social.html %}
 

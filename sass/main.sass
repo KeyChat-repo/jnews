@@ -44,6 +44,85 @@ a
 	&:hover, &:focus
 		color: $accent
 
+.nv
+	background: $dark
+	height: 51px
+.navbar
+	padding: 0
+	line-height: 1.5
+	z-index: 999
+	background: $dark
+	.navbar-toggler
+		margin-right: $gutter
+
+.navbar-brand
+	margin-left: $gutter
+	margin-right: $gutter
+	text-decoration: none
+	text-transform: uppercase
+	line-height: 38px
+	span
+		font-size: 12px
+		color: $accent
+	@media (max-width: 1300px) and (min-width: 992px)
+		display: none
+.navbar-nav
+	margin: auto
+	text-transform: uppercase
+	.nav-item
+		font-size: 14px
+		line-height: 22px
+		font-weight: bold
+		padding: 5px 10px
+		text-decoration: none
+		border-bottom: 3px solid $dark
+		background-color: $dark
+		&:hover
+			color: #ffffff
+			background-color: lighten($dark, 5%)
+			border-bottom: 3px solid $accent
+		.nav-link
+			text-decoration: none
+			text-align: center
+	.active
+		color: #ffffff
+		background-color: lighten($dark, 8%)
+		border-bottom: 3px solid $accent
+
+.nav-search
+	background: $dark
+	padding-left: $gutter
+	padding-right: $gutter
+	@media (max-width: 1300px) and (min-width: 992px)
+		padding-left: 0
+		padding-right: $gutter/3	
+	.top-button
+		border: none
+		color: lighten($text-color, 35%)
+		margin-left: 5px
+		&:hover, &:active, &:focus
+			background: none
+		@media (max-width: 1300px) and (min-width: 992px)
+			display: none
+	.top-search-form
+		font-size: 14px
+		background: transparent
+		border-radius: 0
+		text-align: left
+		@media (max-width: 1300px) and (min-width: 992px)
+			padding: 2px 5px
+			text-align: right
+			width: 100%
+			overflow: hidden
+		border: none
+		border-bottom: 1px solid rgba(white,.1)
+		&:focus
+			color: #ffffff
+			box-shadow: none
+			background: transparent
+			border-bottom: 1px solid rgba(white,.2)
+		
+
 .top-line
 	background-color: $dark
 	position: relative
