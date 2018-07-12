@@ -4,23 +4,29 @@ backend:
   branch: master # Branch to update (master by default)
 
 publish_mode: editorial_workflow
-slug:
-  encoding: "ascii"
-  clean_accents: true
 
 media_folder: "img/uploads" # Folder where user uploaded files should go
 
 collections: # A list of collections the CMS should be able to edit
-  - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Post" # Used in the UI, ie.: "New Post"
-    folder: "_posts" # The path to the folder where the documents are stored
+  - name: "politics" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Политика" # Used in the UI, ie.: "New Post"
+    folder: "_posts/politics/2018/" # The path to the folder where the documents are stored
     sort: "date:desc" # Default is title:asc
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields: # The fields each document in this collection have
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Categories", name: "categories", widget: "string", required: true}
-    meta: # Meta data fields. Just like fields, but without any preview element
-      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
+      - {label: "categories", name: "categories", widget: "hidden", default: "politics"}
+      - {label: "catname", name: "catname", widget: "hidden", default: "Политика"}
+      - {label: "Название статьи", name: "title", widget: "string"}
+      - {label: "Структурная ссылка: 'news/politics/YYYY-MM-DD-nazvanie-statii-latinicey-bez-probelov.html'", name: "permalink", widget: "string"}
+      - {label: "Краткое описание (цитата/первый абзац)", name: "description", widget: "string"}
+      - {label: "Главное изображение (маленькое разрешение)", name: "thumb", widget: "image"}
+      - {label: "Главное изображение (высокое разрешение)", name: "image", widget: "image"}
+      - {label: "Содержание", name: "body", widget: "markdown", buttons: [bold, italic, link, heading-two, quote]}
+      - {label: "Дата публикации", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
+    
+      
+
+  
+  
