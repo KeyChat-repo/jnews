@@ -25,8 +25,121 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Главное изображение (высокое разрешение)", name: "image", widget: "image"}
       - {label: "Содержание", name: "body", widget: "markdown", buttons: [bold, italic, link, heading-two, quote]}
       - {label: "Дата публикации", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
-    
-      
 
+  - name: "economics" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Экономика" # Used in the UI, ie.: "New Post"
+    folder: "_posts/economics/2018/" # The path to the folder where the documents are stored
+    sort: "date:desc" # Default is title:asc
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields: # The fields each document in this collection have
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "categories", name: "categories", widget: "hidden", default: "economics"}
+      - {label: "catname", name: "catname", widget: "hidden", default: "Экономика"}
+      - {label: "Название статьи", name: "title", widget: "string"}
+      - {label: "Структурная ссылка: 'news/economics/YYYY-MM-DD-nazvanie-statii-latinicey-bez-probelov.html'", name: "permalink", widget: "string"}
+      - {label: "Краткое описание (цитата/первый абзац)", name: "description", widget: "string"}
+      - {label: "Главное изображение (маленькое разрешение)", name: "thumb", widget: "image"}
+      - {label: "Главное изображение (высокое разрешение)", name: "image", widget: "image"}
+      - {label: "Содержание", name: "body", widget: "markdown", buttons: [bold, italic, link, heading-two, quote]}
+      - {label: "Дата публикации", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}  
+
+  - name: "society" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Общество" # Used in the UI, ie.: "New Post"
+    folder: "_posts/society/2018/" # The path to the folder where the documents are stored
+    sort: "date:desc" # Default is title:asc
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields: # The fields each document in this collection have
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "categories", name: "categories", widget: "hidden", default: "society"}
+      - {label: "catname", name: "catname", widget: "hidden", default: "Общество"}
+      - {label: "Название статьи", name: "title", widget: "string"}
+      - {label: "Структурная ссылка: 'news/society/YYYY-MM-DD-nazvanie-statii-latinicey-bez-probelov.html'", name: "permalink", widget: "string"}
+      - {label: "Краткое описание (цитата/первый абзац)", name: "description", widget: "string"}
+      - {label: "Главное изображение (маленькое разрешение)", name: "thumb", widget: "image"}
+      - {label: "Главное изображение (высокое разрешение)", name: "image", widget: "image"}
+      - {label: "Содержание", name: "body", widget: "markdown", buttons: [bold, italic, link, heading-two, quote]}
+      - {label: "Дата публикации", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}  
+
+  - name: "gallery" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Фоторепортажи" # Used in the UI, ie.: "New Post"
+    folder: "_posts/gallery/2018/" # The path to the folder where the documents are stored
+    sort: "date:desc" # Default is title:asc
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields: # The fields each document in this collection have
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "categories", name: "categories", widget: "hidden", default: "gallery"}
+      - {label: "catname", name: "catname", widget: "hidden", default: "Фоторепортажи"}
+      - {label: "Название статьи", name: "title", widget: "string"}
+      - {label: "Структурная ссылка: 'news/gallery/YYYY-MM-DD-nazvanie-statii-latinicey-bez-probelov.html'", name: "permalink", widget: "string"}
+      - {label: "Краткое описание (цитата/первый абзац)", name: "description", widget: "string"}
+      - {label: "Главное изображение (маленькое разрешение)", name: "thumb", widget: "image"}
+      - {label: "Главное изображение (высокое разрешение)", name: "image", widget: "image"}
+      - {label: "Содержание", name: "body", widget: "markdown", buttons: [bold, italic, link, heading-two, quote]}
+      - {label: "Дата публикации", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}    
+
+  - name: "person" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Досье" # Used in the UI, ie.: "New Post"
+    folder: "_posts/person/2018/" # The path to the folder where the documents are stored
+    sort: "date:desc" # Default is title:asc
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields: # The fields each document in this collection have
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "categories", name: "categories", widget: "hidden", default: "person"}
+      - {label: "catname", name: "catname", widget: "hidden", default: "Досье"}
+      - {label: "Название статьи", name: "title", widget: "string"}
+      - {label: "Структурная ссылка: 'news/person/YYYY-MM-DD-nazvanie-statii-latinicey-bez-probelov.html'", name: "permalink", widget: "string"}
+      - {label: "Краткое описание (цитата/первый абзац)", name: "description", widget: "string"}
+      - {label: "Главное изображение (маленькое разрешение)", name: "thumb", widget: "image"}
+      - {label: "Главное изображение (высокое разрешение)", name: "image", widget: "image"}
+      - {label: "Содержание", name: "body", widget: "markdown", buttons: [bold, italic, link, heading-two, quote]}
+      - {label: "Дата публикации", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
+
+  - name: "pressrel" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Пресс-релизы" # Used in the UI, ie.: "New Post"
+    folder: "_posts/pressrel/2018/" # The path to the folder where the documents are stored
+    sort: "date:desc" # Default is title:asc
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields: # The fields each document in this collection have
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "categories", name: "categories", widget: "hidden", default: "pressrel"}
+      - {label: "catname", name: "catname", widget: "hidden", default: "Пресс-релизы"}
+      - {label: "Название статьи", name: "title", widget: "string"}
+      - {label: "Структурная ссылка: 'news/pressrel/YYYY-MM-DD-nazvanie-statii-latinicey-bez-probelov.html'", name: "permalink", widget: "string"}
+      - {label: "Краткое описание (цитата/первый абзац)", name: "description", widget: "string"}
+      - {label: "Главное изображение (маленькое разрешение)", name: "thumb", widget: "image"}
+      - {label: "Главное изображение (высокое разрешение)", name: "image", widget: "image"}
+      - {label: "Содержание", name: "body", widget: "markdown", buttons: [bold, italic, link, heading-two, quote]}
+      - {label: "Дата публикации", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
+
+  - name: "world" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Мир" # Used in the UI, ie.: "New Post"
+    folder: "_posts/world/2018/" # The path to the folder where the documents are stored
+    sort: "date:desc" # Default is title:asc
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields: # The fields each document in this collection have
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "categories", name: "categories", widget: "hidden", default: "world"}
+      - {label: "catname", name: "catname", widget: "hidden", default: "Мир"}
+      - {label: "Название статьи", name: "title", widget: "string"}
+      - {label: "Структурная ссылка: 'news/world/YYYY-MM-DD-nazvanie-statii-latinicey-bez-probelov.html'", name: "permalink", widget: "string", default: "news/world/"}
+      - label: "Регион"
+        name: "region"
+        widget: "select"
+        options:
+          - { label: "Россия", value: "russia" }
+          - { label: "Америка", value: "usa" }
+          - { label: "Европа", value: "europe" }
+          - { label: "Азия", value: "asia" }
+      - {label: "Краткое описание (цитата/первый абзац)", name: "description", widget: "string"}
+      - {label: "Главное изображение (маленькое разрешение)", name: "thumb", widget: "image"}
+      - {label: "Главное изображение (высокое разрешение)", name: "image", widget: "image"}
+      - {label: "Содержание", name: "body", widget: "markdown", buttons: [bold, italic, link, heading-two, quote]}
+      - {label: "Дата публикации", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}    
   
   
