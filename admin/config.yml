@@ -21,9 +21,12 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Название статьи", name: "title", widget: "string"}
       - {label: "Структурная ссылка: 'news/politics/YYYY-MM-DD-nazvanie-statii-latinicey-bez-probelov.html'", name: "permalink", widget: "string"}
       - {label: "Краткое описание (цитата/первый абзац)", name: "description", widget: "string"}
+      - {label: "Ключевые слова (через запятую)", name: "keywords", widget: "list", allow_add: true}
       - {label: "Главное изображение (маленькое разрешение)", name: "thumb", widget: "image"}
       - {label: "Главное изображение (высокое разрешение)", name: "image", widget: "image"}
       - {label: "Содержание", name: "body", widget: "markdown", buttons: [bold, italic, link, heading-two, quote]}
+      - {label: "Источник публикации", name: "source", widget: "string", default: ""}
+      - {label: "Источник медиа-контента", name: "foto", widget: "string", default: ""}
       - {label: "Дата публикации", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
 
   - name: "economics" # Used in routes, ie.: /admin/collections/:slug/edit

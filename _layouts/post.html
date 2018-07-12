@@ -17,6 +17,15 @@
 						<div class="page-header-meta">
 							<a href="{{site.category_dir}}/{{page.categories}}" class="page-category-link">{{page.catname}}</a> <span class="date">{{page.date | date: "%d/%m/%Y"}}</span>
 							<h1>{{page.title}}</h1>
+							{% if page.keywords %}
+							<div class="keywords d-block">
+								<ul>
+									{% for key in page.keywords %}
+									<li class="badge badge-secondary">{{key}}</li>
+									{% endfor %}
+								</ul>
+							</div>
+							{% endif %}
 
 							<div class="item-social">
 								{% include likely-custom.html %}
@@ -48,8 +57,18 @@
 						</nav>
 
 						<div class="article-body">
-
+							<img src="{{page.image}}" alt="{{page.title}}">
+							
 							{{content}}
+
+							<div class="article-meta-data">
+								{% if page.source and page.source != "" %}
+								<p><!-- <i class="fa fa-copyright"></i> -->Источник: <span>{{page.source}}</span></p>
+								{% endif %}
+								{% if page.foto and page.foto != "" %}
+								<p><!-- <i class="fa fa-camera-retro"></i> -->Фото: <span>{{page.foto}}</span></p>
+								{% endif %}
+							</div>
 
 						</div>
 
